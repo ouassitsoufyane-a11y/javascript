@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Notes des stagiaires</h1>
+    <form action="">
+        <div class="id">
+            <label for="id">id :</label>
+            <input type="text" id="id">
+        </div>
+
+        <div class="nom">
+            <label for="nom">nom :</label>
+            <input type="text" id="nom">
+        </div>
+
+        <div class="group">
+            <label for="groupe">id :</label>
+            <select value="groupe" id="groupe">
+                <option value="dd101">dd101</option>
+                <option value="dd102">dd102</option>
+                <option value="dd103">dd103</option>
+                <option value="dd104">dd104</option>
+            </select>
+        </div>
+
+        <div class="filiere">
+            <label for="filiere">filiere :</label>
+            <input type="radio" value="tdi" name="filiere" id="tdi">
+            <label for="tdi">TDI</label>
+            <input type="radio" value="tdm" name="filiere" id="tdm">
+            <label for="tdm">TDM</label>
+            <input type="radio" value="tri" name="filiere" id="tri">
+            <label for="tri">TRI</label>
+        </div>
+
+
+        <div class="module">
+            <label for="module">module :</label>
+            <input type="checkbox" value="php" id="php" name="module">
+            <label for="php">php</label>
+            <input type="checkbox" value="javascript" id="javascript" name="module">
+            <label for="javascript">javascript</label>
+            <input type="checkbox" value="poo" id="poo" name="module">
+            <label for="poo">poo</label>
+        </div>
+
+        <div class="note">
+            <label for="note">note :</label>
+            <input type="text" id="note">
+        </div>
+
+        <button id="ajouter">ajouter la Note</button>
+        <button id="enreg">enregister</button>
+
+    </form>
+
+    <h1>liste des notes</h1>
+    <table class="table">
+        <tr>
+            <th>ID</th>
+            <th>NOM</th>
+            <th>NOTE</th>
+            <th>FILIERE</th>
+            <th>GROUPE</th>
+            <th>MODULE</th>
+            <th>GESTION</th>
+        </tr>
+    </table>
+    <style>
+        body{
+            background-color: azure;
+            font-size: large;
+        }
+        form{
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            gap: 20px;
+            background-color: antiquewhite;
+            padding: 50px;
+        }
+        button:nth-of-type(1){
+            background-color: aqua;
+            padding: 10px;
+            border-radius: 20px;
+            font-size: large;
+            font-weight: bold;
+        }
+        button:nth-of-type(2){
+            background-color: rgb(240, 86, 15);
+            padding: 10px;
+            border-radius: 20px;
+            font-size: large;
+            font-weight: bold;
+        }
+        input{
+            padding: 10px;
+            border-radius: 20px;
+            border: none;
+        }
+        table {
+            font-family: arial, sans-serif;
+            border-collapse: collapse;
+            width: 100%;
+        }
+        td, th {
+            border: 1px solid #dddddd;
+            text-align: left;
+            padding: 8px;
+            background-color: bisque;
+        }
+        #btn-delete{
+            background-color: red;
+        } 
+        #btn-modif{
+            background-color: rgb(43, 235, 5);
+        } 
+        button:focus{
+            background-color: #dddddd;
+        }
+    </style>
+    
+    <script src="script.js"></script>
+</body>
+</html>

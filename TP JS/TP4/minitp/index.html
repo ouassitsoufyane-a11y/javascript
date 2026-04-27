@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JS Practice</title>
+    <style>
+        body{
+            font-family: Arial;
+            padding: 20px;
+        }
+        table, td, th{
+            border: 1px solid black;
+            border-collapse: collapse;
+            padding: 8px;
+        }
+        tr.active{
+            background: black;
+            color: white;
+        }
+        button{
+            margin: 5px;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>🔹 تمرين Buttons</h2>
+    <button>Btn 1</button>
+    <button>Btn 2</button>
+    <button>Btn 3</button>
+
+    <hr>
+
+    <h2>🔹 Form</h2>
+    <input type="text" id="name" placeholder="Nom">
+
+    <hr>
+
+    <h2>🔹 Table</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Nom</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody id="table-body">
+            <tr data-index="0">
+                <td>Ali</td>
+                <td>
+                    <button class="btn">Click</button>
+                    <button class="delete">Supprimer</button>
+                </td>
+            </tr>
+            <tr data-index="1">
+                <td>Sara</td>
+                <td>
+                    <button class="btn">Click</button>
+                    <button class="delete">Supprimer</button>
+                </td>
+            </tr>
+            <tr data-index="2">
+                <td>Yassine</td>
+                <td>
+                    <button class="btn">Click</button>
+                    <button class="delete">Supprimer</button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+    <script src="script.js"></script>
+</body>
+</html>
