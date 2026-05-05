@@ -33,29 +33,34 @@
 //     })
 // };
 
-async function getUsers() {
-    try{
-        const REQUIST = await fetch("https://jsonplaceholder.typicode.com/users");
-        const JSOPJ = await REQUIST.json();
-        console.log(JSOPJ);
-    }catch{
-        console.log("not found")
-    }
+// async function getUsers() {
+//     try{
+//         const REQUIST = await fetch("https://jsonplaceholder.typicode.com/users");
+//         const JSOPJ = await REQUIST.json();
+//         console.log(JSOPJ);
+//     }catch{
+//         console.log("not found")
+//     }
   
-}
+// }
 
-async function getreq() {
-  try {
-    const response = await fetch("https://jsonplaceholder.typicode.com/users");
-    const data = await response.json();
-    console.log(data);
-  } catch (err) {
-    console.log("not found");
-  }
-}
+// async function getreq() {
+//   try {
+//     const response = await fetch("https://jsonplaceholder.typicode.com/users");
+//     const data = await response.json();
+//     console.log(data);
+//   } catch (err) {
+//     console.log("not found");
+//   }
+// }
 
-getreq();
-getUsers();
+// getreq(); 
+// getUsers();
+
+
+let ch = "ofppt"
+console.log(ch.slice(1,3))
+
 
 
 

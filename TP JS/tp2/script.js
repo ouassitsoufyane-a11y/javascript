@@ -127,19 +127,29 @@ function ajouterNote(event){
     }
 
     listStagiaier[indextable].module.push(modules)
-    console.log("okkkkk")
+    listStagiaier.forEach(st => {
+        st.module.forEach((m ,index)=> {
+            document.querySelectorAll(".module-box")[index].innerHTML = `
+                                                                    <strong>Algo</strong>
+                                                                    CC1: ${m.cc1} | CC2:  ${m.cc2} | CC3:  ${m.cc3} | EFM:  ${m.efm} || NoteModule :  ${m.cc1}
+                                                                    `
+        })
+    })
 }
 
 function afficher(){
     document.getElementById("bodytable").innerHTML = ``;
     listStagiaier.forEach((st,index) => {
-        document.getElementById("bodytable").innerHTML += `<tr class="clicktable" data-index="${index}">
-                                                            <td>${st.id}</td>
-                                                            <td>${st.nom}</td>
-                                                            <td>${st.prenom}</td>
-                                                            <td>${st.age}</td>
-                                                            <td>${st.module}</td>
-                                                           </tr>`
+        document.getElementById("bodytable").innerHTML += `<tr class="clicktable"  data-index="${index}">
+                                                                <td>${st.id}</td>
+                                                                <td>${st.nom}</td>
+                                                                <td>${st.prenom}</td>
+                                                                <td>${st.age}</td>
+                                                                <td>
+                                                                    <div class="module-box">
+                                                                    </div>
+                                                                </td>
+                                                          </tr>`
     })
     
 }

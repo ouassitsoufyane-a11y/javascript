@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>efm 22</title>
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+
+<body>
+
+    
+
+
+<div class="container py-4">
+
+    <!-- عنوان -->
+    <h1 class="text-center mb-4">Commander les TVs</h1>
+
+    <!-- الفورم -->
+    <form class="card p-4 shadow-sm mb-4">
+        <div class="row">
+
+            <div class="col-md-6 mb-3">
+                <label for="tv" class="form-label">TVs</label>
+                <select id="tv" class="form-select">
+                                        
+                </select>
+            </div>
+
+            <div class="col-md-6 mb-3">
+                <label for="qnt" class="form-label">Quantité</label>
+                <input type="number" id="qnt" min="1" class="form-control" required>
+                <span class=" text-danger" id="qt-error"></span>
+                <span class=" text-danger" id=""></span>
+            </div>
+
+        </div>
+
+        <div class="text-center">
+            <button id="ajouter" class="btn btn-primary px-4" onclick="ajouerAupanier(event)">Ajouter</button>
+        </div>
+    </form>
+
+    <!-- جدول -->
+    <div class="card p-3 shadow-sm">
+        <h4 class="text-center mb-3">Panier de commandes</h4>
+
+        <div class="table-responsive">
+            <table class="table table-bordered table-hover text-center align-middle">
+                <thead class="table-primary">
+                    <tr>
+                        <th>REFERENCE</th>
+                        <th>QUANTITE</th>
+                        <th>IMAGE</th>
+                        <th>ACTION</th>
+                    </tr>
+                </thead>
+
+                <tbody id="table-body">
+                    <!-- nnn -->
+                </tbody>
+
+                <tfoot>
+                    <tr>
+                        <td colspan="2">Total HT : <span id="ht"></span></td>
+                        <td colspan="2">Total TTC : <span id="ttc"></span></td>
+                    </tr>
+                </tfoot>
+            </table>
+        </div>
+
+        <div class="text-center">
+            <button id="commander" class="btn btn-success px-4" onclick="JsonSerializer(event)">Commander</button>
+        </div>
+    </div>
+
+</div>
+<script src="script.js"></script>
+</body>
+</html>

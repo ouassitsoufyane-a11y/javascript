@@ -24,7 +24,6 @@ vdata.addEventListener("click", (e) => {
         row.style.color = "green";
         row.style.background = "black";
 
-        // remplir formulaire
         let st = stagiaires[selectedIndex];
 
         id.value = st.id;
