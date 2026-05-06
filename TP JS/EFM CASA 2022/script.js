@@ -110,8 +110,8 @@ function afficher(){
                                 </tr>`
     })
 
-    document.getElementById("ht").innerHTML = `${calculerPrixHT() }DH`;
-    document.getElementById("ttc").innerHTML = `${calculerPrixTTC() }DH`;
+    document.getElementById("ht").innerHTML = `${calculerPrixHT()}DH`;
+    document.getElementById("ttc").innerHTML = `${calculerPrixTTC()}DH`;
 
 }
 calculerPrixHT();
